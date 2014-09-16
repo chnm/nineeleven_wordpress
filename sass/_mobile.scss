@@ -1,0 +1,27 @@
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+.menu-toggle,
+    .main-navigation.toggled .nav-menu {
+        display: block;
+    }
+
+    .main-navigation ul {
+        display: none;
+    }
+    
+
+/*--------------------------------------------------------------
+10.0 Content
+--------------------------------------------------------------*/
+
+.content-area, .site-main {
+    margin:0;
+}
+.site-content .widget-area {
+    width: $size__site-main;
+}
+.widget {
+    margin:0 0 1.5em 0;
+}
+

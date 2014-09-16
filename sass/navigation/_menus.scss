@@ -3,7 +3,12 @@
 	display: block;
 	float: left;
 	width: 100%;
-
+	font-family:$font__header;
+	text-align:center;
+	text-transform: uppercase;
+	border-bottom:1px solid $color__border-main;
+	letter-spacing: 1px;
+	padding:1em 0;
 	ul {
 		list-style: none;
 		margin: 0;
@@ -45,7 +50,9 @@
 	}
 	li {
 		float: left;
+		display:inline-block;
 		position: relative;
+		margin:0 10px;
 
 		&:hover > a {
 		}
@@ -65,16 +72,6 @@
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
-
-	.main-navigation ul {
-		display: none;
-	}
-}
 
 .site-main .comment-navigation,
 .site-main .paging-navigation,
