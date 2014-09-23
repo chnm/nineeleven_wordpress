@@ -90,8 +90,8 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  background: white;
+html {
+  background: #808080;
   /* Fallback for when there is no custom background color defined. */
 }
 
@@ -197,7 +197,7 @@ address {
 }
 
 pre {
-  background: #eeeeee;
+  background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 1.5rem;
@@ -215,7 +215,7 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666666;
+  border-bottom: 1px dotted #666;
   cursor: help;
 }
 
@@ -253,7 +253,7 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #cccccc;
+  background-color: #ccc;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
@@ -334,7 +334,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #cccccc #cccccc #bbbbbb;
+  border-color: #ccc #ccc #bbb;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
   -webkit-border-radius: 3px;
@@ -357,7 +357,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #cccccc #bbbbbb #aaaaaa;
+  border-color: #ccc #bbb #aaa;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
 
@@ -369,7 +369,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  border-color: #aaaaaa #bbbbbb #bbbbbb;
+  border-color: #aaa #bbb #bbb;
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -410,7 +410,7 @@ input[type="password"],
 input[type="search"],
 textarea {
   color: #4d4d4d;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
   -webkit-border-radius: 3px;
@@ -450,11 +450,11 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: #8e8264;
+  color: #8E8264;
   text-decoration: none;
 }
 a:visited {
-  color: #8e8264;
+  color: #8E8264;
 }
 a:hover, a:focus, a:active {
   color: #bba46a;
@@ -510,6 +510,9 @@ a:hover, a:focus, a:active {
 .main-navigation a {
   display: block;
   text-decoration: none;
+}
+.main-navigation .menu {
+  display: inline-block;
 }
 
 /* Small menu */
@@ -649,12 +652,21 @@ a:hover, a:focus, a:active {
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
-body {
-  background: url("../../../../themes/911/images/bg_small.jpg") no-repeat center top fixed;
+html {
+  background: url("images/bg_small.jpg") no-repeat center top fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 #page {
@@ -663,6 +675,19 @@ body {
   padding: 30px;
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+.site-branding {
+  text-align: center;
+}
+
+.site-title a {
+  display: inline-block;
+}
+.site-title img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
 }
 
 .content-area {

@@ -1,9 +1,18 @@
-body {
-    background: url('../../../../themes/911/images/bg_small.jpg') no-repeat center top fixed;
+html {
+    background: url('images/bg_small.jpg') no-repeat center top fixed;
     background-size: cover; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
+    height:100%;
+    overflow:hidden; 
+}
+
+body {
+    margin: 0;
+    height:100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling:touch;
 }
 #page {
     max-width: 65em;
@@ -11,6 +20,19 @@ body {
     padding:30px;
     overflow:auto;
     background-color: $color__background-transparency;
+}
+.site-branding {
+    text-align:center;
+}
+.site-title {
+    a{
+        display: inline-block;
+    }
+    img{
+        display:block;
+        max-width:100%;
+        width:100%;
+    }
 }
 .content-area {
     float: left;
