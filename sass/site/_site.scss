@@ -34,12 +34,41 @@ body {
         width:100%;
     }
 }
+.site-description {
+    display: none;
+}
+#site-navigation button.menu-toggle {
+    width:100%;
+    float:left;
+}
+#search-container {
+    input[type=text] {
+        width:70%;
+        float:left;
+    }
+    input[type=submit], button[type=submit] {
+        width:30%;
+        float:left;
+    }
+}
 .content-area {
     float: left;
     margin: 0 (-$size__site-sidebar) 0 0;
     width: $size__site-main;
 }
 
+.entry-footer {
+    span {
+        &:after {
+            content: "  |  ";
+        }
+    }
+    span:last-of-type {
+        &:after {
+            content: "";
+        }
+    }
+}
 .site-main {
     margin: 0 $size__site-sidebar 0 0;
 }
@@ -48,11 +77,16 @@ body {
     float: right;
     overflow: hidden;
     width: $size__site-sidebar;
+    padding:1em 0;
 }
 
 .site-footer {
     clear: both;
     width: $size__site-main;
+
+    .site-info {
+        font-size:.8em;
+    }
 }
 
 /*--------------------------------------------------------------

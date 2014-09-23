@@ -1,16 +1,44 @@
 /*--------------------------------------------------------------
+Search
+--------------------------------------------------------------*/
+#searchform {
+    input[type=text]{
+        width:50%;
+        float:left;
+    }
+    input[type=submit]{
+        width:50%;
+        float:left;
+    }
+} 
+
+/*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
 .menu-toggle,
     .main-navigation.toggled .nav-menu {
-        display: block;
+        display: block !important;
+
+        li{
+            display:block;
+            width:100%;
+            float:left;
+            padding:5px 0;
+            border-bottom:1px solid $color__border-main;
+
+            &:last-of-type{
+                border-bottom:none;
+            }
+        }
     }
 
     .main-navigation ul {
-        display: none;
+        display: none !important;
     }
     
-
+#footer-nav {
+    display: none;
+}
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
